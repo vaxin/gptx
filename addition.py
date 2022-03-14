@@ -17,14 +17,14 @@ def count(x):
   p, v1 = int(x / 10), x % 10
   v2 = next(v1)
   if end(v2):
-    count(p)
-  else:
-    x = p * 10 + v2
+    p = count(p)
+
+  x = p * 10 + v2
 
   return x
 
 x = 0
 
-for i in range(100):
+for i in range(200):
   x = count(x)
   print(x)
